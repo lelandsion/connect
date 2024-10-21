@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'add_sensor_page.dart';
 import 'trends_page.dart';
-import 'sensors_list_page.dart'; // Import this in dashboard_page.dart
+import 'sensors_list_page.dart'; // Import for the SensorsListPage
 import 'time_series_page.dart';
 
+/// A page that displays the energy usage dashboard for IoT sensors.
+/// It allows users to view energy consumption statistics, add new sensors,
+/// and navigate to different pages for detailed insights.
 class DashboardPage extends StatefulWidget {
-  final List<Map<String, dynamic>> sensorsData;
-  final Function onDataChanged;
+  final List<Map<String, dynamic>> sensorsData; // List of sensor data
+  final Function onDataChanged; // Callback to notify parent of data changes
 
   DashboardPage({required this.sensorsData, required this.onDataChanged});
 
@@ -16,23 +19,24 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  late List<Map<String, dynamic>> sensorsData;
+  late List<Map<String, dynamic>> sensorsData; // Local copy of sensor data
 
   @override
   void initState() {
     super.initState();
-    sensorsData = widget.sensorsData;
+    sensorsData = widget.sensorsData; // Initialize with data passed from the parent
   }
 
   @override
   Widget build(BuildContext context) {
-    final totalSensors = sensorsData.length;
-    final energyUsageByCategory = _calculateEnergyUsageByCategory();
+    final totalSensors = sensorsData.length; // Total number of sensors
+    final energyUsageByCategory = _calculateEnergyUsageByCategory(); // Calculate energy usage
 
     return Scaffold(
       appBar: AppBar(
         title: Text('Energy Usage Dashboard'),
         actions: [
+          // Button to navigate to the Sensors List Page
           IconButton(
             icon: Icon(Icons.list),
             onPressed: () {
@@ -47,18 +51,17 @@ class _DashboardPageState extends State<DashboardPage> {
               );
             },
           ),
-          // Button to navigate to Trends Page
-
+          // Additional buttons can be added here for other functionalities
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Pie Chart
+            // Pie Chart for visualizing energy usage by category
             _buildPieChart(energyUsageByCategory),
             SizedBox(height: 16),
-            // Add IoT Sensor Button
+            // Button to navigate to Add Sensor Page
             ElevatedButton(
               onPressed: () async {
                 // Navigate to AddSensorPage and await for new sensor data
@@ -71,15 +74,15 @@ class _DashboardPageState extends State<DashboardPage> {
 
                 if (newSensor != null) {
                   setState(() {
-                    sensorsData.add(newSensor);
-                    widget.onDataChanged();  // Save the data after adding a sensor
+                    sensorsData.add(newSensor); // Add the new sensor data
+                    widget.onDataChanged();  // Notify parent of data change
                   });
                 }
               },
               child: Text('Add IoT Sensor'),
             ),
             SizedBox(height: 16),
-            // Sensor Visuals
+            // Display the sensor visuals or a message if no sensors are added
             Expanded(
               child: totalSensors > 10
                   ? Text('You have added $totalSensors IoT sensors.')
@@ -88,22 +91,24 @@ class _DashboardPageState extends State<DashboardPage> {
                 itemCount: totalSensors,
                 itemBuilder: (context, index) {
                   final sensor = sensorsData[index];
-                  return _buildSensorVisual(sensor, index);  // Pass index here
+                  return _buildSensorVisual(sensor, index);  // Pass index for deletion
                 },
-              )
+              ),
             ),
           ],
         ),
       ),
-      // Bottom Navigation to access other pages
+      // Bottom Navigation Bar for accessing other pages
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            // Button to remain on the Dashboard Page
             IconButton(
               icon: Icon(Icons.dashboard),
               onPressed: () {}, // Already on DashboardPage
             ),
+            // Button to navigate to Time Series Page
             IconButton(
               icon: Icon(Icons.timeline),
               onPressed: () {
@@ -115,6 +120,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 );
               },
             ),
+            // Button to add a new sensor
             IconButton(
               icon: Icon(Icons.add),
               onPressed: () async {
@@ -128,11 +134,12 @@ class _DashboardPageState extends State<DashboardPage> {
 
                 if (newSensor != null) {
                   setState(() {
-                    sensorsData.add(newSensor);
+                    sensorsData.add(newSensor); // Add new sensor data
                   });
                 }
               },
             ),
+            // Button to navigate to the Sensors List Page
             IconButton(
               icon: Icon(Icons.list),
               onPressed: () {
@@ -141,7 +148,7 @@ class _DashboardPageState extends State<DashboardPage> {
                   MaterialPageRoute(
                     builder: (context) => SensorsListPage(
                       sensorsData: sensorsData,
-                      onDataChanged: widget.onDataChanged,  // Add this line to pass the callback
+                      onDataChanged: widget.onDataChanged, // Pass the callback
                     ),
                   ),
                 );
@@ -153,6 +160,7 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 
+  /// Calculates total energy usage by category from the sensor data.
   Map<String, double> _calculateEnergyUsageByCategory() {
     Map<String, double> usageByCategory = {
       'HVAC': 0,
@@ -174,10 +182,10 @@ class _DashboardPageState extends State<DashboardPage> {
       }
     }
 
-    return usageByCategory;
+    return usageByCategory; // Return the calculated usage
   }
 
-
+  /// Builds a pie chart to display energy usage by category.
   Widget _buildPieChart(Map<String, double> energyUsageByCategory) {
     return SfCircularChart(
       title: ChartTitle(text: 'Total Energy Usage by Category (kWh)'),
@@ -193,11 +201,13 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 
+  /// Builds a visual representation of a sensor.
   Widget _buildSensorVisual(Map<String, dynamic> sensor, int index) {
     String category = sensor['category'];
     IconData iconData;
     Color color;
 
+    // Determine icon and color based on sensor category
     switch (category) {
       case 'HVAC':
         iconData = Icons.ac_unit;
@@ -240,7 +250,7 @@ class _DashboardPageState extends State<DashboardPage> {
           IconButton(
             icon: Icon(Icons.delete, color: Colors.red),
             onPressed: () {
-              _removeSensor(index);
+              _removeSensor(index); // Call the method to remove the sensor
             },
           ),
         ],
@@ -248,11 +258,11 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 
+  /// Removes a sensor from the list based on its index.
   void _removeSensor(int index) {
     setState(() {
-      sensorsData.removeAt(index);
-      widget.onDataChanged();  // Save the data after removing a sensor
+      sensorsData.removeAt(index); // Remove the sensor at the specified index
+      widget.onDataChanged();  // Notify parent of data change
     });
   }
-// ... (Rest of the code remains the same, including _buildPieChart and _buildSensorVisual methods)
 }

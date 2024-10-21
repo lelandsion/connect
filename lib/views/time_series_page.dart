@@ -2,20 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:intl/intl.dart';
 
+/// A page that displays energy usage over time in a time series chart.
+///
+/// This page analyzes sensor data to identify peak traffic times and trends
+/// in energy usage, providing a visual representation through charts.
 class TimeSeriesPage extends StatelessWidget {
-  final List<Map<String, dynamic>> sensorsData;
+  final List<Map<String, dynamic>> sensorsData; // List of sensors data
 
   TimeSeriesPage({required this.sensorsData});
 
   @override
   Widget build(BuildContext context) {
-    final chartData = _buildChartData();
-    final peakTimes = _identifyPeakTrafficTimes(chartData);
-    final trends = _analyzeTrends();
+    final chartData = _buildChartData(); // Prepare chart data
+    final peakTimes = _identifyPeakTrafficTimes(chartData); // Identify peak traffic times
+    final trends = _analyzeTrends(); // Analyze trends in energy usage
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Energy Usage Over Time'),
+        title: Text('Energy Usage Over Time'), // Title of the page
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -34,40 +38,39 @@ class TimeSeriesPage extends StatelessWidget {
     );
   }
 
-  // Function to build the chart data based on the sensorsData
+  /// Builds the chart data based on the sensors data.
   List<_ChartData> _buildChartData() {
     List<_ChartData> chartData = [];
 
+    // Iterate over sensors data to create chart data points
     for (var sensor in sensorsData) {
       for (var dataPoint in sensor['data_points']) {
         DateTime timestamp = DateTime.fromMillisecondsSinceEpoch(
-            (int.parse(dataPoint['timestamp']) * 1000));
+            (int.parse(dataPoint['timestamp']) * 1000)); // Convert timestamp
         double energyUsage =
-            double.tryParse(dataPoint['energy_usage'].toString()) ?? 0;
-        chartData.add(_ChartData(timestamp, energyUsage));
+            double.tryParse(dataPoint['energy_usage'].toString()) ?? 0; // Parse energy usage
+        chartData.add(_ChartData(timestamp, energyUsage)); // Add data to chart
       }
     }
 
+    // Sort chart data by timestamp
     chartData.sort((a, b) => a.timestamp.compareTo(b.timestamp));
-    return chartData;
+    return chartData; // Return sorted chart data
   }
 
-  // Function to identify peak traffic times based on energy usage threshold
+  /// Identifies peak traffic times based on energy usage threshold.
   List<_ChartData> _identifyPeakTrafficTimes(List<_ChartData> chartData) {
     // Calculate the average energy usage
     double averageUsage = chartData.fold(0.0, (double sum, data) => sum + data.energyUsage) / chartData.length;
-
 
     // Set a dynamic threshold (150% of the average usage)
     double threshold = averageUsage * 1.5;
 
     // Identify peaks where energy usage exceeds the threshold
-    return chartData
-        .where((data) => data.energyUsage > threshold)
-        .toList();
+    return chartData.where((data) => data.energyUsage > threshold).toList();
   }
 
-  // Function to build the time series chart with highlighted peak times
+  /// Builds the time series chart with highlighted peak times.
   Widget _buildTimeSeriesChart(List<_ChartData> chartData, List<_ChartData> peakTimes) {
     return SfCartesianChart(
       primaryXAxis: DateTimeAxis(),
@@ -92,7 +95,7 @@ class TimeSeriesPage extends StatelessWidget {
     );
   }
 
-  // Function to build the list of identified peak traffic times
+  /// Builds the list of identified peak traffic times.
   Widget _buildPeakTrafficAnalysis(List<_ChartData> peakTimes) {
     if (peakTimes.isEmpty) {
       return Padding(
@@ -127,7 +130,7 @@ class TimeSeriesPage extends StatelessWidget {
     );
   }
 
-  // Function to analyze trends based on sensor data
+  /// Analyzes trends based on sensor data.
   List<Map<String, dynamic>> _analyzeTrends() {
     List<Map<String, dynamic>> trends = [];
 
@@ -141,7 +144,7 @@ class TimeSeriesPage extends StatelessWidget {
         double usage = double.tryParse(dataPoint['energy_usage'].toString()) ?? 0;
 
         String hour = DateFormat('HH').format(timestamp); // Group by hour
-        hourlyUsage[hour] = (hourlyUsage[hour] ?? 0) + usage;
+        hourlyUsage[hour] = (hourlyUsage[hour] ?? 0) + usage; // Accumulate usage by hour
       }
     }
 
@@ -160,10 +163,10 @@ class TimeSeriesPage extends StatelessWidget {
       }
     });
 
-    return trends;
+    return trends; // Return the list of detected trends
   }
 
-  // Function to display the trend analysis
+  /// Displays the trend analysis results.
   Widget _buildTrendAnalysis(List<Map<String, dynamic>> trends) {
     if (trends.isEmpty) {
       return Padding(
@@ -200,10 +203,10 @@ class TimeSeriesPage extends StatelessWidget {
   }
 }
 
-// Class to define chart data
+/// Class to define chart data points for energy usage.
 class _ChartData {
-  final DateTime timestamp;
-  final double energyUsage;
+  final DateTime timestamp; // The timestamp of the data point
+  final double energyUsage; // The energy usage value at that timestamp
 
-  _ChartData(this.timestamp, this.energyUsage);
+  _ChartData(this.timestamp, this.energyUsage); // Constructor
 }
