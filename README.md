@@ -1,4 +1,4 @@
-# connect
+# Connect
 # Canada-wide 100-Hour Net-Zero Challenge Winner (1st Place 🏆)
 competition link: https://eco.ca/work-integrated-learning/100-hour-net-zero-student-challenge/
 
