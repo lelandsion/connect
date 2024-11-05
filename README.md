@@ -18,8 +18,8 @@ In order to improve the energy monitoring and management of buildings we propose
 Our proposed solution involves the development of a user-friendly app called Connect where we leverage open-source AI tools for data analysis. The app will serve as a tool for tracking energy usage a data analysis tool for energy breakdown and usage and either connecting directly by wifi or giving suggestions to building. This strategic utilization enhances the app's capabilities, aiming to improve user experience by providing insightful analysis of energy usage through advanced data analysis technology. The app’s software can further be implemented across buildings for large overall energy savings.
 
 ## Images
+![Screenshot from September 23, 2024](https://raw.githubusercontent.com/lelandsion/connect/main/images/Energy_Dashboard.png)
 ![Data Analysis Screenshot](https://raw.githubusercontent.com/lelandsion/connect/main/images/Data_Analysis_Screenshot_Edited.png)
-![Screenshot from September 23, 2024](https://raw.githubusercontent.com/lelandsion/connect/main/images/Screenshot 2024-09-23 at 5.18.54 PM.png)
 ![Sensors Edited](https://raw.githubusercontent.com/lelandsion/connect/main/images/Sensors_Edited.png)
 ![Eco Canada Website](https://raw.githubusercontent.com/lelandsion/connect/main/images/Eco_Canada_Website.jpeg)
 ![Group 9 GHG Emissions](https://raw.githubusercontent.com/lelandsion/connect/main/images/Group%209%20GHG%20emissions.png)
