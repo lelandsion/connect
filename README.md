@@ -19,11 +19,11 @@ Our proposed solution involves the development of a user-friendly app called Con
 
 ## Images
 ![Data Analysis Screenshot](https://raw.githubusercontent.com/lelandsion/connect/main/images/Data_Analysis_Screenshot_Edited.png)
-![Screenshot from September 23, 2024](https://raw.githubusercontent.com/lelandsion/connect/main/images/Screenshot%202024-09-23%20at%205.18.54%20PM.png)
-![Screenshot from November 4, 2024](https://raw.githubusercontent.com/lelandsion/connect/main/images/Screenshot%202024-11-04%20at%206.14.16%20PM.png)
+![Screenshot from September 23, 2024](https://raw.githubusercontent.com/lelandsion/connect/main/images/Screenshot 2024-09-23 at 5.18.54 PM.png)
 ![Sensors Edited](https://raw.githubusercontent.com/lelandsion/connect/main/images/Sensors_Edited.png)
 ![Eco Canada Website](https://raw.githubusercontent.com/lelandsion/connect/main/images/Eco_Canada_Website.jpeg)
-![Group 9 GHG Emissions - 2](https://raw.githubusercontent.com/lelandsion/connect/main/images/Group%209%20GHG%20emissions-2.png)
 ![Group 9 GHG Emissions](https://raw.githubusercontent.com/lelandsion/connect/main/images/Group%209%20GHG%20emissions.png)
+![Group 9 GHG Emissions - 2](https://raw.githubusercontent.com/lelandsion/connect/main/images/Group%209%20GHG%20emissions-2.png)
+
 
 
