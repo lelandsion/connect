@@ -12,7 +12,7 @@ This repository contains:
 - **Data Analysis & Forecasting**: Identify trends, peak energy usage, and apply AI-driven optimizations.
 
 👉 **Check out the AI analysis & forecasting results** inside:  
-📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/ai-energy-optimization/)** 
+📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)** 
 
 ---
 

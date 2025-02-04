@@ -1,4 +1,4 @@
-# AI Energy Optimization for Smart Buildings 
+# AI Energy Optimization for Smart Buildings 🏢
 
 This project leverages **AI-powered energy forecasting** to identify trends and **optimize energy usage** in commercial buildings. Using **historical energy data**, we trained a **LSTM-based deep learning model** to predict future consumption and simulate potential **energy savings strategies**.
 
