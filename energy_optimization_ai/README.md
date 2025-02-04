@@ -65,7 +65,7 @@ https://colab.research.google.com/drive/1UOwEtu5qBP4ysiTNCZUyzbm4W454bgLq?usp=sh
 ## 📈 Visualizations
 ### 🔵 AI Forecasting vs. Actual Energy Usage
 > **Comparing AI predictions with real-world energy consumption**
-![HVAC Forecast](visualizations/Screenshot 2025-02-04 at 12.59.23 AM.png)
+![HVAC Forecast](visualizations/Screenshot%202025-02-04%20at%2012.59.23%20AM.png)
 
 ### 🔴 Energy Savings Simulation
 > **Estimated savings by reducing peak energy demand**

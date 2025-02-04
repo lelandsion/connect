@@ -33,7 +33,7 @@ Our proposed solution involves the development of a user-friendly app called Con
 🤖 **We trained an AI model** to forecast energy demand **hourly** and simulate **potential energy savings** by adjusting HVAC & lighting use.  
 💡 **Forecasts were extremely accurate**, showing potential for **real-world implementation in smart buildings**.
 
-👉 **Explore AI energy forecasting in** 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/ai-energy-optimization/)**
+👉 **Explore AI energy forecasting in** 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)**
 
 
 ---
