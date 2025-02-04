@@ -8,7 +8,7 @@ Optimize energy usage in buildings using AI-driven data analysis, application th
 ## 📌 **What's Inside This Repository?**
 This repository contains:
 - **IoT-Driven Energy Dashboard**: Real-time energy tracking system.
-- **AI Energy Optimization Model**: Analyzes HVAC, lighting, and MELS (Miscellaneous Equipment Load) for **predictive energy savings**.
+- **AI Energy Optimization Model (new)**: Analyzes HVAC, lighting, and MELS for **predictive energy savings**.
 - **Data Analysis & Forecasting**: Identify trends, peak energy usage, and apply AI-driven optimizations.
 
 👉 **Check out the AI analysis & forecasting results** inside:  
