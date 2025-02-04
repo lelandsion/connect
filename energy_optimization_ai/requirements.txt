@@ -1,0 +1,16 @@
+# General Libraries
+numpy
+pandas
+matplotlib
+seaborn
+
+# Google Colab & File Handling
+gdown
+
+# Scikit-learn (Data Processing & Machine Learning)
+scikit-learn
+
+# TensorFlow & Keras (Deep Learning)
+tensorflow
+
+# Garbage Collection (Optional, included in Python standard library)
