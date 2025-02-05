@@ -49,7 +49,7 @@ function DashboardPage({ sensorsData }) {
                         "#9966FF",
                         "#FF9F40",
                     ]
-                    : ["#C0C0C0"], // Gray for no data
+                    : ["#C0C0C0"], // Gray for no data_preprocessing
             },
         ],
     };

@@ -11,7 +11,7 @@ function App() {
     return savedData ? JSON.parse(savedData) : [];
   });
 
-  // Save data to localStorage whenever sensorsData changes
+  // Save data_preprocessing to localStorage whenever sensorsData changes
   useEffect(() => {
     localStorage.setItem("sensorsData", JSON.stringify(sensorsData));
   }, [sensorsData]);
