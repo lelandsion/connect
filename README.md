@@ -35,6 +35,19 @@ Our proposed solution involves the development of a user-friendly app called Con
 
 👉 **Explore AI energy forecasting in** 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)**
 
+---
+## 🌍 **Impact**
+### Environmental Benefits:
+- **GHG Emission Reduction**: Widespread adoption across cities could result in **50,000+ tons of CO₂ savings annually**, aiding global climate goals.
+- **City-Wide Implementation**: If applied to **50% of buildings in a medium-sized city**, emissions could be cut by **20–30%**.
+
+### Financial Benefits:
+- **City-Wide Savings**: Implementing Connect in **10,000 buildings** could yield **$50M in annual savings** for building managers.
+- **Energy Audits Simplified**: Provides actionable insights to **reduce operating costs** without hiring specialized consultants.
+
+### Scalability Insights:
+- **Integration Across Climates**: Incorporate regional **temperature and humidity data** to improve model generalizability.
+- **Residential Application**: Adapt for **multi-unit residential buildings** to enhance tenant comfort and reduce common area costs.
 
 ---
 
@@ -45,7 +58,6 @@ Our proposed solution involves the development of a user-friendly app called Con
 </div>
 
 ---
-
 <div align="center">
   <img src="https://raw.githubusercontent.com/lelandsion/connect/main/images/Eco_Canada_Website.jpeg" alt="Eco Canada Website" width="400" />
   <img src="https://raw.githubusercontent.com/lelandsion/connect/main/images/Group%209%20GHG%20emissions.png" alt="Group 9 GHG Emissions" width="400" />
