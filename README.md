@@ -35,7 +35,6 @@ Our proposed solution involves the development of a user-friendly app called Con
 
 👉 **Explore AI energy forecasting in** 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)**
 
----
 # **Impact**
 ### Environmental Benefits:
 - **GHG Emission Reduction**: Widespread adoption across cities could result in **50,000+ tons of CO₂ savings annually**, aiding global climate goals.
