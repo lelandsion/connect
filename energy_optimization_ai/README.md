@@ -38,8 +38,23 @@ The dataset includes:
 ```
 
 ## 🛠️ Setup & Run
-**Colab link:**
-https://colab.research.google.com/drive/1UOwEtu5qBP4ysiTNCZUyzbm4W454bgLq?usp=sharing
+
+### Google Colab links:
+**[Introduction Notebook](https://colab.research.google.com/drive/1UOwEtu5qBP4ysiTNCZUyzbm4W454bgLq?usp=sharing)** 👈  
+   Overview of the project, objectives, and initial exploration.
+
+**[Data Preprocessing Notebook](https://colab.research.google.com/drive/1knCKYpCKZKSI864ljbQ_t4d4rXMT1v8C?usp=sharing )** 👈 
+   Data cleaning, normalization, and preparation for AI models.
+
+**[Energy Forecasting Notebook](https://colab.research.google.com/drive/1E3Ek7pXRXCntxrZbkR8WfJjZgbaw-Ex8?usp=sharing)** 👈
+   Predicts hourly energy consumption for HVAC, lighting, and MELS.
+
+**[Temperature Forecasting Notebook](https://colab.research.google.com/drive/1n_cT2Yfv6YOwmGyTxpEHzyUEhPx-Ajv7?usp=sharing)** 👈 
+   Predicts hourly temperature for different building zones.
+
+**[Anomaly Detection Notebook](https://colab.research.google.com/drive/15TKIbA3ZRT6YmPZ4T-SQ6ajvWgVHtEvt?usp=sharing)** 👈 
+   Identifies energy spikes and anomalies for optimization insights.
+
 
 1. **Clone the repository**:
    ```bash
@@ -78,10 +93,20 @@ This graph models the effect of reducing peak energy demand by 10%. The “Befor
 
 visualizations/Screenshot 2025-02-04 at 1.00.10 AM.png
 ## 📌 Actionable Insights
-- **Target HVAC adjustments during peak hours** to reduce demand.
-- **Use AI to recommend energy-efficient schedules** based on historical data.
-- **Optimize energy loads dynamically** using real-time IoT data.
-- **Simulate financial cost savings** from reducing peak energy use.
+➜ **Target HVAC adjustments during peak hours** to reduce demand.  
+ **Potential Savings**: Optimizing HVAC use can **cut energy costs by up to 15%**, leading to **$50,000–$500,000 in annual savings per building** depending on size.
+
+➜ **Use AI to recommend energy-efficient schedules** based on historical data.  
+ **Impact**: Adaptive scheduling can lead to a **5–10% decrease in overall energy consumption**, reducing **GHG emissions by thousands of metric tons** annually across a city-wide rollout.
+
+➜ **Optimize energy loads dynamically** using real-time IoT data.  
+ **Smart integration with IoT sensors** can enable **automated demand response**, reducing **grid strain** and lowering **peak energy costs** for businesses.
+
+➜ **Simulate financial cost savings** from reducing peak energy use.  
+ **Monetary Impact**: A **10% reduction in peak demand** across **10,000 buildings** could result in **$50M+ in collective energy savings per year**.
+
+➜ **Prevent energy waste with anomaly detection** to catch inefficient systems.  
+ **Real-World Benefit**: Detecting and fixing **faulty HVAC systems** early can **save up to 30% in wasted energy costs**, preventing unnecessary expenses and emissions.
 
 ## 📱 Future Improvements
 - **Integrate real-time IoT sensor data** for dynamic forecasting.
