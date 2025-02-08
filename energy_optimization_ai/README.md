@@ -40,7 +40,7 @@ The dataset includes:
 ## 🛠️ Setup & Run
 
 ### Google Colab links:
-**[Introduction Notebook](https://colab.research.google.com/drive/1UOwEtu5qBP4ysiTNCZUyzbm4W454bgLq?usp=sharing)** 👈  
+**[Introduction Notebook](https://colab.research.google.com/drive/1UOwEtu5qBP4ysiTNCZUyzbm4W454bgLq?usp=sharing)** 👈 
    Overview of the project, objectives, and initial exploration.
 
 **[Data Preprocessing Notebook](https://colab.research.google.com/drive/1knCKYpCKZKSI864ljbQ_t4d4rXMT1v8C?usp=sharing )** 👈 
