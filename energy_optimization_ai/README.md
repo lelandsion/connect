@@ -55,6 +55,7 @@ The dataset includes:
 **[Anomaly Detection Notebook](https://colab.research.google.com/drive/15TKIbA3ZRT6YmPZ4T-SQ6ajvWgVHtEvt?usp=sharing)** 👈 
    Identifies energy spikes and anomalies for optimization insights.
 
+### Run on your own computer
 
 1. **Clone the repository**:
    ```bash
