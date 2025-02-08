@@ -68,6 +68,7 @@ https://colab.research.google.com/drive/1UOwEtu5qBP4ysiTNCZUyzbm4W454bgLq?usp=sh
 <img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/Screenshot 2025-02-04 at 12.59.23 AM.png" alt="HVAC Forecast" width="9000" />
 Comparing AI predictions with real-world energy consumption
 This visualization compares actual energy usage against AI-predicted usage for HVAC, lighting, and MELS systems, demonstrating the model’s forecasting accuracy over time.
+
 ### 🔴 Energy Savings Simulation
 > **Estimated savings by reducing peak energy demand**
 <img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/Screenshot 2025-02-04 at 1.00.10 AM.png" alt="Energy Savings" width="1200" />
