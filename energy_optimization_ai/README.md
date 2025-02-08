@@ -97,5 +97,8 @@ For questions or collaboration:
 📧 [lelandsion@gmail.com](lelandsion@gmail.com).  
 📧 [ckwestendorf@gmail.com](ckwestendorf@gmail.com)
 
-🔗 [LinkedIn](https://linkedin.com/in/lelandsion)
+
+🔗 [LinkedIn Leland](https://linkedin.com/in/lelandsion)
+🔗 [LinkedIn Cole](https://linkedin.com/in/https://www.linkedin.com/in/cole-westendorf-b773ba2a8/)
+
 
