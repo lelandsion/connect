@@ -13,7 +13,7 @@ This repository contains:
 👉 **Check out the AI analysis & forecasting results** inside:  
 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)**
 
-👉 **Check out the research paper** inside:
+👉 **Check out the research paper** inside:    
 📄 **[Read the Research Paper (WIP)](https://docs.google.com/document/d/1jrwprvZoYLttL2sAlocMM_Sod2favZZmDmq5Auob6xg/edit?tab=t.0)**
 
 
