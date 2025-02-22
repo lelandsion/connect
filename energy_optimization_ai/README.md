@@ -1,12 +1,17 @@
-# AI Energy Optimization for Smart Buildings 🏢
+# AI Energy Optimization for Smart Buildings 🏢 CUCAI 2025
 
-This project leverages **AI-powered energy forecasting** to identify trends and **optimize energy usage** in commercial buildings. Using **historical energy data**, we trained a **LSTM-based deep learning model** to predict future consumption and simulate potential **energy savings strategies**.
+This project leverages **AI-powered energy forecasting** to identify trends and **optimize energy usage** in commercial buildings. Using **historical energy data**, we trained a **LSTM-based deep learning model** to predict future consumption and simulate potential **energy savings strategies** Done as part of the 2025 CUCAi conference.
 
 ## 📌 Key Features
 - **Time Series Forecasting**: Predicts **hourly energy usage** for **HVAC, lighting, and miscellaneous loads**.
 - **Data-Driven Insights**: Identifies peak energy usage patterns and correlations with temperature and occupancy.
 - **Energy Optimization Simulation**: Models the impact of **reducing peak loads by 10%** to demonstrate **potential savings**.
 - **Multi-Output LSTM Model**: Uses deep learning to forecast energy consumption based on **past usage patterns**.
+
+## Smart Energy Forecasting & Optimization ##
+This project explores machine learning models for predicting energy usage and optimizing consumption.
+
+📄 **[Read the Research Paper (WIP)](https://docs.google.com/document/d/1jrwprvZoYLttL2sAlocMM_Sod2favZZmDmq5Auob6xg/edit?tab=t.0)**
 
 ## 📊 Dataset
 The dataset includes:
@@ -81,15 +86,15 @@ The dataset includes:
 ## 📈 Visualizations
 ### 🔵 AI Forecasting vs. Actual Energy Usage
 > **Comparing AI predictions with real-world energy consumption**
-<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/Screenshot 2025-02-04 at 12.59.23 AM.png" alt="HVAC Forecast" width="9000" />
+<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/energy_forecasting_evaluation_plot.png" alt="HVAC Forecast" width="9000" />
 Comparing AI predictions with real-world energy consumption
 This visualization compares actual energy usage against AI-predicted usage for HVAC, lighting, and MELS systems, demonstrating the model’s forecasting accuracy over time.
 
 ### 🔴 Energy Savings Simulation
 > **Estimated savings by reducing peak energy demand**
-<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/Screenshot 2025-02-04 at 1.00.10 AM.png" alt="Energy Savings" width="1200" />
+<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/load_management_simulation.png" alt="Energy Savings" width="1200" />
 Estimated savings by reducing peak energy demand
-This graph models the effect of reducing peak energy demand by 10%. The “Before Optimization” line represents the original energy usage, while the “After Optimization” line demonstrates the potential for energy savings.
+HVAC energy consumption before and after load shifting on January 15, 2020. The red dashed line represents original peak-hour usage (5-9 PM), while the green line shows reduced peak demand and redistributed energy consumption, leading to reduced inefficiencies.
 
 
 visualizations/Screenshot 2025-02-04 at 1.00.10 AM.png
@@ -122,7 +127,6 @@ For questions or collaboration:
 
 📧 [lelandsion@gmail.com](lelandsion@gmail.com).  
 📧 [ckwestendorf@gmail.com](ckwestendorf@gmail.com)
-
 
 🔗 [LinkedIn Leland](https://linkedin.com/in/lelandsion)
 🔗 [LinkedIn Cole](https://linkedin.com/in/https://www.linkedin.com/in/cole-westendorf-b773ba2a8/)

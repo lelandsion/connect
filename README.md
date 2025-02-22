@@ -1,4 +1,4 @@
-# Connect
+# Connect (CUCAI 2025)
 # Canada-wide 100-Hour Net-Zero Challenge Winner (1st Place 🏆)
 competition link: https://eco.ca/work-integrated-learning/100-hour-net-zero-student-challenge/
 
@@ -8,11 +8,17 @@ Optimize energy usage in buildings using AI-driven data analysis, application th
 ## 📌 **What's Inside This Repository?**
 This repository contains:
 - **IoT-Driven Energy Dashboard**: Real-time energy tracking system.
-- **AI Energy Optimization Model (NEW!)**: Analyzes HVAC, lighting, and MELS for **predictive energy savings**.
+- **AI Energy Optimization Model (NEW!)**: Analyzes HVAC, lighting, and MELS for **predictive energy savings** done as part of CUCAI 2025.
 - **Data Analysis & Forecasting**: Identify trends, peak energy usage, and apply AI-driven optimizations.
 
 👉 **Check out the AI analysis & forecasting results** inside:  
 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)**
+
+👉 **Check out the research paper** inside:
+This project explores machine learning models for predicting energy usage and optimizing consumption.
+
+📄 **[Read the Research Paper (WIP)](https://docs.google.com/document/d/1jrwprvZoYLttL2sAlocMM_Sod2favZZmDmq5Auob6xg/edit?tab=t.0)**
+
 
 # Problem Scope
 
