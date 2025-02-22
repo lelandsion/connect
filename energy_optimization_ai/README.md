@@ -86,8 +86,8 @@ The dataset includes:
 ## 📈 Visualizations
 ### 🔵 AI Forecasting vs. Actual Energy Usage
 > **Comparing AI predictions with real-world energy consumption**
-<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/energy_forecasting_normalized_enlarged.png" alt="HVAC Forecast" width="10000" />
 <img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/energy_forecasting_unormalized_enlarged.png" alt="HVAC Forecast" width="10000" />
+<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/energy_forecasting_normalized_enlarged.png" alt="HVAC Forecast" width="10000" />
 > 
 Comparing AI predictions with real-world energy consumption
 This visualization compares actual energy usage against AI-predicted usage for HVAC, lighting, and MELS systems, demonstrating the model’s forecasting accuracy over time.
