@@ -1,6 +1,6 @@
 # AI Energy Optimization for Smart Buildings 🏢 CUCAI 2025
 
-This project leverages **AI-powered energy forecasting** to identify trends and **optimize energy usage** in commercial buildings. Using **historical energy data**, we trained a **LSTM-based deep learning model** to predict future consumption and simulate potential **energy savings strategies** Done as part of the 2025 CUCAi conference.
+This project leverages **AI-powered energy forecasting** to identify trends and **optimize energy usage** in commercial buildings. Using **historical energy data**, we trained a **LSTM-based deep learning model** to predict future consumption and simulate potential **energy savings strategies** Done as part of the 2025 CUCAI conference.
 
 ## 📌 Key Features
 - **Time Series Forecasting**: Predicts **hourly energy usage** for **HVAC, lighting, and miscellaneous loads**.

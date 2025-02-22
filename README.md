@@ -1,9 +1,8 @@
-# Connect (CUCAI 2025)
-## Canada-wide 100-Hour Net-Zero Challenge Winner (1st Place 🏆)
+# Connect 
+# (CUCAI 2025, Canada-wide 100-Hour Net-Zero Challenge Winner (1st Place 🏆)
 competition link: https://eco.ca/work-integrated-learning/100-hour-net-zero-student-challenge/
 
 Optimize energy usage in buildings using AI-driven data analysis, application that gathers data from building sensors to optimize energy consumption using predictive analysis.
-
 
 ## 📌 **What's Inside This Repository?**
 This repository contains:
@@ -15,8 +14,6 @@ This repository contains:
 📁 **[`ai-energy-optimization/`](https://github.com/lelandsion/connect/tree/main/energy_optimization_ai/)**
 
 👉 **Check out the research paper** inside:
-This project explores machine learning models for predicting energy usage and optimizing consumption.
-
 📄 **[Read the Research Paper (WIP)](https://docs.google.com/document/d/1jrwprvZoYLttL2sAlocMM_Sod2favZZmDmq5Auob6xg/edit?tab=t.0)**
 
 
