@@ -86,7 +86,7 @@ The dataset includes:
 ## 📈 Visualizations
 ### 🔵 AI Forecasting vs. Actual Energy Usage
 > **Comparing AI predictions with real-world energy consumption**
-<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/energy_forecasting_evaluation_plot.png" alt="HVAC Forecast" width="9000" />
+<img src="https://raw.githubusercontent.com/lelandsion/connect/main/energy_optimization_ai/visualizations/energy_forecasting_evaluation_plot.png" alt="HVAC Forecast" width="10000" />
 Comparing AI predictions with real-world energy consumption
 This visualization compares actual energy usage against AI-predicted usage for HVAC, lighting, and MELS systems, demonstrating the model’s forecasting accuracy over time.
 
@@ -97,7 +97,6 @@ Estimated savings by reducing peak energy demand
 HVAC energy consumption before and after load shifting on January 15, 2020. The red dashed line represents original peak-hour usage (5-9 PM), while the green line shows reduced peak demand and redistributed energy consumption, leading to reduced inefficiencies.
 
 
-visualizations/Screenshot 2025-02-04 at 1.00.10 AM.png
 ## 📌 Actionable Insights
 ➜ **Target HVAC adjustments during peak hours** to reduce demand.  
  **Potential Savings**: Optimizing HVAC use can **cut energy costs by up to 15%**, leading to **$50,000–$500,000 in annual savings per building** depending on size.
