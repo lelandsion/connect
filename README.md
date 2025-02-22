@@ -1,5 +1,5 @@
 # Connect (CUCAI 2025)
-# Canada-wide 100-Hour Net-Zero Challenge Winner (1st Place 🏆)
+## Canada-wide 100-Hour Net-Zero Challenge Winner (1st Place 🏆)
 competition link: https://eco.ca/work-integrated-learning/100-hour-net-zero-student-challenge/
 
 Optimize energy usage in buildings using AI-driven data analysis, application that gathers data from building sensors to optimize energy consumption using predictive analysis.
