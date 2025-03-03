@@ -6,6 +6,7 @@
     "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
     "dom": "^0.0.3",
+    "mongoose": "^8.9.5",
     "ract": "^0.0.1",
     "react": "^18.0.0",
     "react-chartjs-2": "^5.3.0",
