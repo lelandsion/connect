@@ -21,6 +21,6 @@
             type: String,
             default: []
         },
-    });
+    }, { collection: "energy_data" });
 
-    module.exports = mongoose.model('Energy Data', energy_dataSchema);
+    module.exports = mongoose.model('EnergyData', energy_dataSchema);

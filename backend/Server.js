@@ -16,7 +16,7 @@ app.use(express.json());
 mongoose.set('debug', true);
 mongoose.connect(uri, clientOptions)
     .then(() => {
-        console.log('Connected to MongoDB');
+        console.log('Connected to MongoDB.');
         console.log('Database name:', mongoose.connection.db.databaseName); // Logs the exact database name
         console.log('Host:', mongoose.connection.host);                     // Logs the host (cluster)
         console.log('Port:', mongoose.connection.port);                     // Logs the port, if available
@@ -25,17 +25,19 @@ mongoose.connect(uri, clientOptions)
 
 // const authRoutes = require('./routes/auth'); // Add this later
 const sensorRoutes = require('./routes/sensors');  // New route for sensors
-// const sensorDataRoutes = require('./routes/sensorData');  // New route for sensor readings
+const energyDataRoutes = require('./routes/energy_data');  // New route for sensor readings
 // const userRoutes = require('./routes/user');
 
 // Route handlers
+app.get("/", (req, res) => {
+    res.send("Backend is running!");
+});
 // app.use('/api/auth', authRoutes); // Add this later
 app.use('/api/sensors', sensorRoutes);  // Manage IoT sensors
-//app.use('/api/sensor-data', sensorDataRoutes);  // Store & retrieve sensor readings
+app.use('/api/energy_data', energyDataRoutes);  // Store & retrieve sensor readings
 //app.use('/api/user', userRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-// this is working
