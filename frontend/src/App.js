@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashboardPage from './components/DashboardPage';
 import AddSensorPage from './components/AddSensorPage';
-//import TrendsPage from './components/TrendsPage';
-//import SensorDetailsPage from './components/SensorDetailsPage';
+import TrendsPage from './components/TrendsPage';
+import SensorDetailsPage from './components/SensorDetailsPage';
+import SensorsListPage from './components/SensorsListPage';
+import TimeSeriesPage from './components/TimeSeriesPage';
+
 // Main App Component
 function App() {
   const [sensorsData, setSensorsData] = useState(() => {
@@ -41,17 +44,12 @@ function App() {
               path="/add-sensor"
               element={<AddSensorPage onAddSensor={addSensor} />}
           />
-
-            { /*
           <Route
               path="/trends"
               element={<TrendsPage sensorsData={sensorsData} />}
           />
-
-
-
           <Route
-              path="/sensor/:id"
+              path="/sensor-details"
               element={
                 <SensorDetailsPage
                     sensorsData={sensorsData}
@@ -60,7 +58,21 @@ function App() {
                 />
               }
           />
-           */}
+          <Route
+            path="/sensors-list"
+            element={
+              <SensorsListPage
+                sensorsData={sensorsData}
+                onDataChanged={() => {
+                /* Implement any additional behavior when the sensor data changes */
+                }}
+              />
+            }
+          />
+          <Route
+            path="/time-series"
+            element={<TimeSeriesPage sensorsData={sensorsData} />}
+          />
         </Routes>
       </Router>
   );

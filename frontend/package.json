@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@syncfusion/ej2-charts": "^28.2.9",
+    "@syncfusion/ej2-react-charts": "^28.2.9",
     "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
     "dom": "^0.0.3",

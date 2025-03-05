@@ -1,1 +1,5 @@
-{}
+{
+  "dependencies": {
+    "@syncfusion/ej2-react-charts": "^28.2.9"
+  }
+}
