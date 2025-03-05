@@ -70,6 +70,18 @@ function DashboardPage() {
                     No data available. Add sensors to start tracking energy usage!
                 </p>
             )}
+            <button onClick={() => navigate("/add-sensor")}>Add Sensor</button>
+            <button onClick={() => navigate("/sensors-list")}>Sensors List</button>
+            { sensorsData.map((sensor, index) => (
+                <button
+                    key={index}
+                    onClick={() => navigate("/sensor-details", { state: { sensorData: sensor } })}
+                >
+                    Sensor Details {sensor.sensor_id}
+                </button>
+            )) }
+            <button onClick={() => navigate("/time-series")}>Time Series</button>
+            <button onClick={() => navigate("/trends")}>Trends</button>
 
             <button onClick={() => navigate("/day-ahead-forecast")}>
                 View Day-Ahead Forecast
