@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const EnergyData = require("../models/EnergyData");
+const { getDayAheadForecast } = require("../visualize_predictions/day_ahead_forecast");
 const axios = require("axios");
 const fs = require("fs");
 
@@ -24,12 +25,36 @@ function minMaxUnscale(value, min, max) {
  */
 router.get("/", async (req, res) => {
     try {
-        const data = await EnergyData.find()
-            .sort({ timestamp: -1 })  // Sort by newest first
-            .limit(50);  // ✅ Fetch only 50 records
+        const data = await EnergyData.find({}, {
+            energy_usage: 1,
+            sensor_id: 1,
+            timestamp: 1,
+            device_type: 1,
+            location: 1
+        }).sort({ timestamp: -1 }).limit(50);
+
+        console.log("🔍 RAW MONGODB RESPONSE:", JSON.stringify(data, null, 2)); // Add this log
 
         res.status(200).json(data);
     } catch (error) {
+        console.error("❌ Error fetching energy data:", error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+/**
+ * @route   POST /api/energy_data/day-ahead
+ * @desc    Gets the day-ahead forecast of the next 24 hours.
+ */
+router.get("/day-ahead", async (req, res) => {
+    try {
+        const forecast = await getDayAheadForecast();
+        if (!forecast) {
+            return res.status(500).json({ error: "Forecast generation failed." });
+        }
+        res.json({ forecast });
+    } catch (error) {
+        console.error("Error generating day-ahead forecast:", error);
         res.status(500).json({ error: error.message });
     }
 });
@@ -59,31 +84,41 @@ router.get("/filter", async (req, res) => {
     try {
         let { start, end } = req.query;
 
-        // Ensure both dates are provided
         if (!start || !end) {
-            return res.status(400).json({ error: "Both start and end dates are required." });
+            return res.status(400).json({ error: "Start and end dates are required." });
         }
 
-        // Convert to proper Date format
+        // Convert dates to proper format
         start = new Date(start);
         end = new Date(end);
 
-        // Validate that end is after start
         if (end < start) {
             return res.status(400).json({ error: "End date must be after start date." });
         }
 
-        // Query MongoDB for entries in the date range
+        // Query energy data for the selected date range
         const data = await EnergyData.find({
             timestamp: { $gte: start, $lte: end }
+        }).sort({ timestamp: 1 });  // Sort by oldest first
+
+        // Aggregate total energy usage by category
+        const breakdown = {
+            total_hvac: 0,
+            total_lighting: 0,
+            total_mels: 0,
+        };
+
+        data.forEach(entry => {
+            breakdown.total_hvac += entry.total_hvac || 0;
+            breakdown.total_lighting += entry.total_lighting || 0;
+            breakdown.total_mels += entry.total_mels || 0;
         });
 
-        res.status(200).json(data);
+        res.status(200).json({ breakdown, data });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
-
 /**
  * @route   POST /api/energy_data
  * @desc    Add a new energy data entry
@@ -91,7 +126,7 @@ router.get("/filter", async (req, res) => {
 router.post("/", async (req, res) => {
     try {
         const { timestamp, energyUsage, additionalData } = req.body;
-        const newEntry = new EnergyData({ timestamp, energyUsage, additionalData });
+        const newEntry = new EnergyData({ timestamp, energy_usage, additionalData });
         await newEntry.save();
         res.status(201).json(newEntry);
     } catch (error) {
@@ -147,6 +182,8 @@ router.post("/predict", async (req, res) => {
     }
 });
 
+
+
 /**
  * @route   PUT /api/energy_data/:id
  * @desc    Update an existing energy data entry by ID
@@ -156,7 +193,7 @@ router.put("/:id", async (req, res) => {
         const { timestamp, energyUsage, additionalData } = req.body;
         const updatedEntry = await EnergyData.findByIdAndUpdate(
             req.params.id,
-            { timestamp, energyUsage, additionalData },
+            { timestamp, energy_usage, additionalData },
             { new: true } // Return the updated document
         );
 

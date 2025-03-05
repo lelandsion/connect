@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "chart.js": "^4.4.7",
+    "axios": "^1.8.1",
+    "chart.js": "^4.4.8",
     "cra-template": "1.2.0",
     "dom": "^0.0.3",
     "mongoose": "^8.9.5",

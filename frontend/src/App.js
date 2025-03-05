@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashboardPage from './components/DashboardPage';
 import AddSensorPage from './components/AddSensorPage';
+import DayAheadChart from "./components/DayAheadChart";
+
 //import TrendsPage from './components/TrendsPage';
 //import SensorDetailsPage from './components/SensorDetailsPage';
 // Main App Component
@@ -41,26 +43,24 @@ function App() {
               path="/add-sensor"
               element={<AddSensorPage onAddSensor={addSensor} />}
           />
-
-            { /*
-          <Route
-              path="/trends"
-              element={<TrendsPage sensorsData={sensorsData} />}
-          />
-
-
-
-          <Route
-              path="/sensor/:id"
-              element={
-                <SensorDetailsPage
-                    sensorsData={sensorsData}
-                    onUpdateSensor={updateSensor}
-                    onDeleteSensor={deleteSensor}
+          {/*
+                <Route
+                    path="/trends"
+                    element={<TrendsPage sensorsData={sensorsData} />}
                 />
-              }
-          />
-           */}
+                <Route
+                    path="/sensor/:id"
+                    element={
+                        <SensorDetailsPage
+                            sensorsData={sensorsData}
+                            onUpdateSensor={updateSensor}
+                            onDeleteSensor={deleteSensor}
+                        />
+                    }
+                />
+                */}
+          {/* New route for forecast visualization */}
+          <Route path="/day-ahead-forecast" element={<DayAheadChart />} />
         </Routes>
       </Router>
   );

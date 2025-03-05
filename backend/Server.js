@@ -15,11 +15,18 @@ app.use(express.json());
 // Database connection
 mongoose.set('debug', true);
 mongoose.connect(uri, clientOptions)
-    .then(() => {
+    .then(async () => {
         console.log('Connected to MongoDB.');
         console.log('Database name:', mongoose.connection.db.databaseName); // Logs the exact database name
         console.log('Host:', mongoose.connection.host);                     // Logs the host (cluster)
-        console.log('Port:', mongoose.connection.port);                     // Logs the port, if available
+        console.log('Port:', mongoose.connection.port || "Default MongoDB Port");
+
+        try {
+            const collection = await mongoose.connection.db.collection('energy_data');
+            console.log("Using collection:", collection.collectionName);
+        } catch (err) {
+            console.error("Collection not found:", err);
+        }
     })
     .catch(err => console.error('MongoDB connection error:', err));
 
