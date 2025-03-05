@@ -7,6 +7,10 @@ import SensorDetailsPage from './components/SensorDetailsPage';
 import SensorsListPage from './components/SensorsListPage';
 import TimeSeriesPage from './components/TimeSeriesPage';
 
+import DayAheadChart from "./components/DayAheadChart";
+
+//import TrendsPage from './components/TrendsPage';
+//import SensorDetailsPage from './components/SensorDetailsPage';
 // Main App Component
 function App() {
   const [sensorsData, setSensorsData] = useState(() => {
@@ -44,6 +48,24 @@ function App() {
               path="/add-sensor"
               element={<AddSensorPage onAddSensor={addSensor} />}
           />
+          {/*
+                <Route
+                    path="/trends"
+                    element={<TrendsPage sensorsData={sensorsData} />}
+                />
+                <Route
+                    path="/sensor/:id"
+                    element={
+                        <SensorDetailsPage
+                            sensorsData={sensorsData}
+                            onUpdateSensor={updateSensor}
+                            onDeleteSensor={deleteSensor}
+                        />
+                    }
+                />
+                */}
+          {/* New route for forecast visualization */}
+          <Route path="/day-ahead-forecast" element={<DayAheadChart />} />
           <Route
               path="/trends"
               element={<TrendsPage sensorsData={sensorsData} />}
